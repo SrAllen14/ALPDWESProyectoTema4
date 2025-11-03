@@ -49,6 +49,7 @@
         
         .principal{
             font-weight: bold;
+            text-align: center;
         }
         
         
@@ -97,15 +98,15 @@
                     <tr class="principal">
                         <td>Nº</td>
                         <td>Enunciado</td>
-                        <td colspan="2">PHP</td>
-                        <td colspan="2">MySQL</td>
+                        <td colspan="2">PDO</td>
+                        <td colspan="2">MySQLi</td>
                     </tr>
                     <tr>
                         <td>0</td>
                         <td>Hola mundo y phpinfo().</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio0mysqli.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
