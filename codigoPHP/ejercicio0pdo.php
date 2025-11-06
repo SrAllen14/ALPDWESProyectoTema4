@@ -26,12 +26,32 @@
                 width: 750px;
                 border: 1px solid black;
                 border-radius: 10px;
-
-                p{
-                    font-weight: bold;
+                text-align: left;
+                padding: 15px;
+                
+                table{
+                    border-collapse: collapse;
+                    
+                    td{
+                        border: 1px solid black;
+                    }
                 }
             }
-
+            
+            .nombre{
+                font-weight: bold;
+                background-color: lightskyblue;
+            }
+            
+            .valor{
+                color: gray;
+                background-color: lemonchiffon;
+            }
+            
+            .error{
+                color: red;
+                background-color: lemonchiffon;
+            }
             footer{
                 margin: auto;
                 background-color: #456d96;
@@ -56,7 +76,7 @@
                 <?php
                     /**
                      * @author Álvaro Allén
-                     * @since 03-11-2025
+                     * @since 06-11-2025
                      * Realizar una conexión con la base de datos. Debe dar error en un intento y 
                      * realizarse correctamente en otro intento (poner mal la contraseña aproposito).
                      */
@@ -84,20 +104,32 @@
                         echo '<br><br>';
                         
                         echo '<p><b>Atributos de la conexión</b></p>';
+                        echo '<table>';
                         foreach($aAtributos as $atributo){
-                            echo "PDO::ATTR_$atributo: ";
+                            echo '<tr>';
+                            echo "<td class='nombre'>PDO::ATTR_$atributo: </td>";
                             try{
-                                echo $miDB->getAttribute(constant("PDO::ATTR_$atributo")).'<br>';
+                                echo "<td class='valor'>".$miDB->getAttribute(constant("PDO::ATTR_$atributo")).'</td>';
                             } catch (PDOException $ePDO){
-                                echo $ePDO->getMessage().'<br>';
+                                echo "<td class='error'>Error:".$ePDO->getMessage().'<br>Código de error: '.$ePDO->getCode().'</td>';
                             }
+                            echo '</tr>';
                         }
+                        echo '</table>';
                     } catch (PDOException $miExceptionPDO){
                         echo "Error: ".$miExceptionPDO->getMessage();
                         echo '<br>';
                         echo 'Código de error: '.$miExceptionPDO->getCode();
                     } finally{
                         unset($miDB);
+                    }
+                    
+                    echo '<br>';
+                    echo "<h3>Eror de conexión por contraseña incorrecta.</h3>";
+                    try{
+                        $miDB = new PDO(DSN, USERNAME, "holaquetal");
+                    } catch(PDOException $ePDO2){
+                        echo $ePDO2->getMessage();
                     }
                 ?>
             </div>
@@ -107,7 +139,7 @@
                 <a href="../indexProyectoTema4.php">
                 Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-03">03-11-2025</time>
+                <time datetime="2025-11-06">06-11-2025</time>
             </div>
         </footer>
     </body>
