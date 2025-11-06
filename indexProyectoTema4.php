@@ -1,5 +1,4 @@
 <html lang="es"><head>
-    <!<!-- Página creada por Gonzalo Junquera -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Indice general de la asignatura">
@@ -25,7 +24,7 @@
             color: white;
         }
         
-        div.tabla{
+        div.tabla2{
             margin:10px auto 10px auto;
             padding: 10px;
             width: 1000px;
@@ -92,7 +91,34 @@
         <h2>Álvaro Allén Perlines</h2>
     </nav>
     <main>
-        <div class="tabla">
+        <div class="tabla1">
+            <table class="bd">
+                <tr>
+                    <td>Archivo</td>
+                    <td>ED Script</td>
+                    <td colspan="2">EE Script</td>
+                </tr>
+                <tr>
+                    <td>Script creación de base de datos y usuario</td>
+                    <td><a href="scriptBD/CreaBDALPDWESProyectoTema4.sql"><img></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Script carga inicial de base de datos</td>
+                    <td><a href="scriptBD/CargaInicialBDALPDWESProyectoTema4.sql"><img></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Script borrado de base de datos y usuario</td>
+                    <td><a href="scriptBD/BorraBDALPDWESProyectoTema4.sql"><img></a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabla2">
             <table>
                 <tbody>
                     <tr class="principal">
