@@ -24,6 +24,22 @@
             color: white;
         }
         
+        div.tabla1{
+            margin:10px auto 10px auto;
+            padding: 10px;
+            width: 500px;
+            
+            border-radius: 20px;
+            background-color: white; 
+        }
+        
+        table.bd{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        
         div.tabla2{
             margin:10px auto 10px auto;
             padding: 10px;
@@ -33,13 +49,14 @@
             background-color: white; 
         }
         
-        table{
+        table.ejer{
             width: 900px;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
             
         }
+        
         img{
             width: 50px;
             height: 50px;
@@ -50,6 +67,7 @@
             font-weight: bold;
             text-align: center;
         }
+        
         
         
         td{
@@ -63,7 +81,7 @@
             width: 50px;
         }
         
-        td:nth-of-type(1){
+        .ejer td:nth-of-type(1){
             width: 50px;
             text-align: center;
         }
@@ -93,33 +111,33 @@
     <main>
         <div class="tabla1">
             <table class="bd">
-                <tr>
+                <tr class="principal">
                     <td>Archivo</td>
                     <td>ED Script</td>
                     <td colspan="2">EE Script</td>
                 </tr>
                 <tr>
                     <td>Script creación de base de datos y usuario</td>
-                    <td><a href="scriptBD/CreaBDALPDWESProyectoTema4.sql"><img></a></td>
-                    <td></td>
-                    <td></td>
+                    <td class="imagen"><a href="mostrarcodigo/script1.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
                 </tr>
                 <tr>
                     <td>Script carga inicial de base de datos</td>
-                    <td><a href="scriptBD/CargaInicialBDALPDWESProyectoTema4.sql"><img></a></td>
-                    <td></td>
-                    <td></td>
+                    <td class="imagen"><a href="mostrarcodigo/script2.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
                 </tr>
                 <tr>
                     <td>Script borrado de base de datos y usuario</td>
-                    <td><a href="scriptBD/BorraBDALPDWESProyectoTema4.sql"><img></a></td>
-                    <td></td>
-                    <td></td>
+                    <td class="imagen"><a href="mostrarcodigo/script3.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
                 </tr>
             </table>
         </div>
         <div class="tabla2">
-            <table>
+            <table class="ejer">
                 <tbody>
                     <tr class="principal">
                         <td>Nº</td>
@@ -224,7 +242,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-10-30">30-10-2025</time>
+            <time datetime="2025-11-06">06-11-2025</time>
         </div>
     </footer>
 </body>
