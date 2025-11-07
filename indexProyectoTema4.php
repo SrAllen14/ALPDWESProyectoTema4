@@ -146,26 +146,18 @@
                         <td colspan="2">MySQLi</td>
                     </tr>
                     <tr>
-                        <td>0</td>
-                        <td>Hola mundo y phpinfo().</td>
+                        <td>1</td>
+                        <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href="codigoPHP/ejercicio0mysqli.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
-                        <td>1</td>
-                        <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                    </tr>
-                    <tr>
                         <td>2</td>
                         <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio2pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo2.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
@@ -242,7 +234,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-11-06">06-11-2025</time>
+            <time datetime="2025-11-07">07-11-2025</time>
         </div>
     </footer>
 </body>
