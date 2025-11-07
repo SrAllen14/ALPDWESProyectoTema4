@@ -164,8 +164,8 @@
                     <tr>
                         <td>3</td>
                         <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio3pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo3.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
