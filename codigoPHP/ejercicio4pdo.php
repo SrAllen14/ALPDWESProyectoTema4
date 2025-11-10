@@ -164,12 +164,12 @@
                                     } else{
                                         echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
                                     }
-                                        echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
-                                        echo '</tr>';
+                                    echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
+                                    echo '</tr>';
                                 }
-
                                 echo '</table>';
                                 } else{
+                                    $consulta = $miDB->query("select * from T02_Departamento WHERE T02_DescDepartamento = $desc");
                                     echo '<table>';
                                     echo '<tr class="titulo">';
                                     echo '<td>T02_CodDepartamento</td>';
@@ -178,18 +178,19 @@
                                     echo '<td>T02_FechaBajaDeparamento</td>';
                                     echo '<td>T02_VolumenDeNegocio</td>';
                                     echo '</tr>';
-
-                                    echo '<tr>';
-                                    echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
-                                    echo '<td>'.$aFila['T02_DescDepartamento'].'</td>';
-                                    echo '<td>'.(new DateTime($aFila['T02_FechaCreacionDepartamento']))->format("d-m-Y").'</td>';
-                                    if(empty($aFila['T02_FechaBajaDepartamento'])){
-                                        echo '<td>Activo</td>';
-                                    } else{
-                                        echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
+                                    while($aFila = $consulta->fetch()){
+                                        echo '<tr>';
+                                        echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
+                                        echo '<td>'.$aFila['T02_DescDepartamento'].'</td>';
+                                        echo '<td>'.(new DateTime($aFila['T02_FechaCreacionDepartamento']))->format("d-m-Y").'</td>';
+                                        if(empty($aFila['T02_FechaBajaDepartamento'])){
+                                            echo '<td>Activo</td>';
+                                        } else{
+                                            echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
+                                        }
+                                        echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
+                                        echo '</tr>';
                                     }
-                                    echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
-                                    echo '</tr>';
                                     echo '</table>';
                                 }
                             
