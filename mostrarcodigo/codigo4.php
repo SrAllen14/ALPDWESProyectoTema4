@@ -51,7 +51,7 @@
         <main>
             <div class="ejercicio">
                 <?php 
-                    highlight_file("../codigoPHP/ejercicio0.php");
+                    highlight_file("../codigoPHP/ejercicio4pdo.php");
                 ?>
             </div>
         </main>

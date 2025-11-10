@@ -72,9 +72,9 @@
                      */
                     
                     // Declaramos las constantes con el valor del host, el nombre de la base, el nombre de usuario y la constraseña de dicho usuario.
-                    const DSN = "mysql:host=10.199.11.90;dbname=DBALPDWESProyectoTema4";
-                    const USERNAME = 'userALPDWESProyectoTema4';
-                    const PASSWORD = 'paso';
+                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
+                    define('USERNAME','userALPDWESProyectoTema4');
+                    define('PASSWORD', 'paso');
                     
                     // El ejercicio se realiza dentro de un try para que, en caso de que haya un error, deje de ejecutarse y salte el mensaje de error.
                     try{
@@ -96,12 +96,16 @@
                         
                         while($aFila = $consulta->fetch()){
                             echo '<tr>';
-                            echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
-                            echo '<td>'.$aFila['T02_DescDepartamento'].'</td>';
-                            echo '<td>'.$aFila['T02_FechaCreacionDepartamento'].'</td>';
-                            echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
-                            echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
-                            echo '</tr>';
+                                echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
+                                echo '<td>'.$aFila['T02_DescDepartamento'].'</td>';
+                                echo '<td>'.(new DateTime($aFila['T02_FechaCreacionDepartamento']))->format("d-m-Y").'</td>';
+                                if(empty($aFila['T02_FechaBajaDepartamento'])){
+                                    echo '<td>Activo</td>';
+                                } else{
+                                    echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
+                                }
+                                echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
+                                echo '</tr>';
                         }
                         
                         echo '</table>';
@@ -117,7 +121,7 @@
                 <a href="../indexProyectoTema4.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-07">07-11-2025</time>
+                <time datetime="2025-11-10">10-11-2025</time>
             </div>
         </footer>
     </body>

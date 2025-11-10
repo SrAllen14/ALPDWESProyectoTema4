@@ -150,7 +150,7 @@
                         <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio0mysqli.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
@@ -172,8 +172,8 @@
                     <tr>
                         <td>4</td>
                         <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no poone nada deben aparecer todos los departamentos.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio4pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo4.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>

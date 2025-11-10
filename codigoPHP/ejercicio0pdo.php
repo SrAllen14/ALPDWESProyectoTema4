@@ -83,9 +83,9 @@
                     
                     // Definimos las constantes con el valor del DNS (host y nombre de la base)
                     // el nombre del usuario y la contraseña.
-                    const DSN = "mysql:host=10.199.11.90;dbname=DBALPDWESProyectoTema4";
-                    const USERNAME = 'userALPDWESProyectoTema4';
-                    const PASSWORD = 'paso';
+                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
+                    define('USERNAME','userALPDWESProyectoTema4');
+                    define('PASSWORD', 'paso');
                     
                     // Definimos un array con cada uno de los atributos que tiene una base de datos.
                     $aAtributos = array(
@@ -139,7 +139,7 @@
                 <a href="../indexProyectoTema4.php">
                 Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-06">06-11-2025</time>
+                <time datetime="2025-11-10">10-11-2025</time>
             </div>
         </footer>
     </body>
