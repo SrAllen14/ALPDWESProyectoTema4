@@ -22,12 +22,24 @@
             .ejercicio{
                 margin-top: 10px;
                 margin-bottom: 10px;
-                width: 750px;
+                width: 1500px;
                 border: 1px solid black;
                 border-radius: 10px;
 
                 p{
                     font-weight: bold;
+                }
+                
+                table{
+                    border-collapse: collapse;
+                    
+                    tr.titulo{
+                        background-color: lightcyan;
+                    }
+                    
+                    td{
+                        border: 1px solid black
+                    }
                 }
             }
 
@@ -56,9 +68,50 @@
                     /**
                      * @author Álvaro Allén
                      * @since 03-11-2025
-                     * 
+                     * Mostrar el contenido de la tabla T02_Departamento de la base de datos DBALPDWESProyectoTema4.
                      */
-
+                    
+                    // Declaramos las constantes con el valor del host, el nombre de la base, el nombre de usuario y la constraseña de dicho usuario.
+                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
+                    define('USERNAME','userALPDWESProyectoTema4');
+                    define('PASSWORD', 'paso');
+                    
+                    // El ejercicio se realiza dentro de un try para que, en caso de que haya un error, deje de ejecutarse y salte el mensaje de error.
+                    try{
+                        // Iniciamos el objeto PDO con los valores de las constantes.
+                        $miDB = new PDO(DSN, USERNAME, PASSWORD);
+                        
+                        // Realizamos la consulta necesaria una vez la conexión sea efectiva.
+                        $consulta = $miDB->query("select * from T02_Departamento");
+                        
+                        // Formateamos la salida para que los valores dentro de la tabla salgan en forma de tabla en HTML.
+                        echo '<table>';
+                        echo '<tr class="titulo">';
+                        echo '<td>T02_CodDepartamento</td>';
+                        echo '<td>T02_DescDepartamento</td>';
+                        echo '<td>T02_FechaCreaciónDepartamento</td>';
+                        echo '<td>T02_FechaBajaDeparamento</td>';
+                        echo '<td>T02_VolumenDeNegocio</td>';
+                        echo '</tr>';
+                        
+                        while($aFila = $consulta->fetch()){
+                            echo '<tr>';
+                                echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
+                                echo '<td>'.$aFila['T02_DescDepartamento'].'</td>';
+                                echo '<td>'.(new DateTime($aFila['T02_FechaCreacionDepartamento']))->format("d-m-Y").'</td>';
+                                if(empty($aFila['T02_FechaBajaDepartamento'])){
+                                    echo '<td>Activo</td>';
+                                } else{
+                                    echo '<td>'.$aFila['T02_FechaBajaDepartamento'].'</td>';
+                                }
+                                echo '<td>'.$aFila['T02_VolumenDeNegocio'].'</td>';
+                                echo '</tr>';
+                        }
+                        
+                        echo '</table>';
+                    }catch(PDOException $ePDO){
+                        echo 'Error al conectarse: '.$ePDO->getMessage();
+                    }
                     
                 ?>
             </div>
@@ -68,7 +121,7 @@
                 <a href="../indexProyectoTema4.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-03">03-11-2025</time>
+                <time datetime="2025-11-10">10-11-2025</time>
             </div>
         </footer>
     </body>

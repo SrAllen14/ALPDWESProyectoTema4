@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <title>Código ejercicio 5</title>
+        <meta charset="UTF-8">
+        <title>Código script creación</title>
         <style>
             *{
                 margin: 0 auto;
@@ -46,12 +47,12 @@
     <body>
         <nav>
             <h2>DWES - Tema 4</h2>
-            <h2>Ejercicio 5</h2>
+            <h2>Script de creación de base de datos y usuario</h2>
         </nav>
         <main>
             <div class="ejercicio">
                 <?php 
-                    highlight_file("../codigoPHP/ejercicio5pdo.php");
+                    highlight_file("../scriptDB/CreaDBALPDWESProyectoTema4.sql");
                 ?>
             </div>
         </main>
@@ -60,7 +61,7 @@
                 <a href="../indexProyectoTema4.php">
                 Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-03">03-11-2025</time>
+                <time datetime="2025-11-06">06-11-2025</time>
             </div>
         </footer>
     </body>

@@ -1,5 +1,4 @@
 <html lang="es"><head>
-    <!<!-- Página creada por Gonzalo Junquera -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Indice general de la asignatura">
@@ -25,7 +24,23 @@
             color: white;
         }
         
-        div.tabla{
+        div.tabla1{
+            margin:10px auto 10px auto;
+            padding: 10px;
+            width: 500px;
+            
+            border-radius: 20px;
+            background-color: white; 
+        }
+        
+        table.bd{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        
+        div.tabla2{
             margin:10px auto 10px auto;
             padding: 10px;
             width: 1000px;
@@ -34,13 +49,14 @@
             background-color: white; 
         }
         
-        table{
+        table.ejer{
             width: 900px;
             margin-left: auto;
             margin-right: auto;
             border-collapse: collapse;
             
         }
+        
         img{
             width: 50px;
             height: 50px;
@@ -51,6 +67,7 @@
             font-weight: bold;
             text-align: center;
         }
+        
         
         
         td{
@@ -64,7 +81,7 @@
             width: 50px;
         }
         
-        td:nth-of-type(1){
+        .ejer td:nth-of-type(1){
             width: 50px;
             text-align: center;
         }
@@ -92,8 +109,35 @@
         <h2>Álvaro Allén Perlines</h2>
     </nav>
     <main>
-        <div class="tabla">
-            <table>
+        <div class="tabla1">
+            <table class="bd">
+                <tr class="principal">
+                    <td>Archivo</td>
+                    <td>ED Script</td>
+                    <td colspan="2">EE Script</td>
+                </tr>
+                <tr>
+                    <td>Script creación de base de datos y usuario</td>
+                    <td class="imagen"><a href="mostrarcodigo/script1.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
+                </tr>
+                <tr>
+                    <td>Script carga inicial de base de datos</td>
+                    <td class="imagen"><a href="mostrarcodigo/script2.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
+                </tr>
+                <tr>
+                    <td>Script borrado de base de datos y usuario</td>
+                    <td class="imagen"><a href="mostrarcodigo/script3.php"><img src="webroot/images/code.png"></a></td>
+                    <td class="imagen"></td>
+                    <td class="imagen"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="tabla2">
+            <table class="ejer">
                 <tbody>
                     <tr class="principal">
                         <td>Nº</td>
@@ -102,50 +146,42 @@
                         <td colspan="2">MySQLi</td>
                     </tr>
                     <tr>
-                        <td>0</td>
-                        <td>Hola mundo y phpinfo().</td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
-                        <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio0mysqli.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                    </tr>
-                    <tr>
                         <td>1</td>
                         <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio2pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo2.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio3pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo3.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no poone nada deben aparecer todos los departamentos.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio4pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo4.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Página web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones insert y una transacción.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio5pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo5.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
@@ -198,7 +234,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-10-30">30-10-2025</time>
+            <time datetime="2025-11-07">07-11-2025</time>
         </div>
     </footer>
 </body>

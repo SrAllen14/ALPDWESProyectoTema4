@@ -55,11 +55,34 @@
                 <?php
                     /**
                      * @author Álvaro Allén
-                     * @since 03-11-2025
-                     * 
+                     * @since 11-11-2025
+                     * Realizamos tres registros a la tabla de la base 
+                     * de datos mediante inserts y una transación
                      */
-
+                     
+                    // Establecemos la configuración de fecha, hora y formato de España
+                    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'spanish');
                     
+                    // Declaramos las constantes con el valor del host, el nombre de la base, el nombre de usuario y la constraseña de dicho usuario.
+                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
+                    define('USERNAME','userALPDWESProyectoTema4');
+                    define('PASSWORD', 'paso');
+                    
+                    $fechaActual = date('Y-m-d');
+                    // El ejercicio se realiza dentro de un try para que, en caso de que haya un error, deje de ejecutarse y salte el mensaje de error.
+                    try{
+                        // Iniciamos el objeto PDO con los valores de las constantes.
+                        $miDB = new PDO(DSN, USERNAME, PASSWORD);
+                        
+                        // Realizamos la consulta necesaria una vez la conexión sea efectiva.
+                        $consulta = $miDB->query("INSERT INTO T02_Departamento VALUES('BBB','$fechaActual',null,'Esto es una prueba', 10.5)");
+                        $consulta = $miDB->query("INSERT INTO T02_Departamento VALUES('CCC','$fechaActual',null,'Esto es una prueba', 10.5)");
+                        $consulta = $miDB->query("INSERT INTO T02_Departamento VALUES('DDD','$fechaActual',null,'Esto es una prueba', 10.5)");
+                        
+                        echo '<p>Insercciones realizadas correctamente.</p>';
+                    }catch(PDOException $ePDO){
+                        echo 'Error al conectarse: '.$ePDO->getMessage();
+                    }
                 ?>
             </div>
         </main>
@@ -68,7 +91,7 @@
                 <a href="../indexProyectoTema4.php">
                Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-03">03-11-2025</time>
+                <time datetime="2025-11-11">11-11-2025</time>
             </div>
         </footer>
     </body>
