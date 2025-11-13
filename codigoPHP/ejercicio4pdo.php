@@ -8,21 +8,29 @@
                 padding: 0 auto;
             }
             body{
+                width: 1920px;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
                 font-family: Arial, sans-serif;
                 background: #f4f6f9;
                 align-items: center;
                 text-align: center;
+                transform-origin: top left;
+                transform: scale(1);
             }
 
             nav{
                 background-color: #456D96;
                 color: white;
+                width: 1920px;
             }
 
             .ejercicio{
+                padding: 20px;
                 margin-top: 10px;
                 margin-bottom: 10px;
-                width: 1500px;
+                width: 1200px;
                 border: 1px solid black;
                 border-radius: 10px;
 
@@ -40,20 +48,21 @@
                     width: 200px;
                     height: 20px;
                 }
+            }
+            
+            table{
+                border-collapse: collapse;
+                width: 720px;
 
-                table{
-                    border-collapse: collapse;
+                tr.titulo{
+                    background-color: lightcyan;
+                }
 
-                    tr.titulo{
-                        background-color: lightcyan;
-                    }
-
-                    td{
-                        border: 1px solid black
-                    }
+                td{
+                    border: 1px solid black
                 }
             }
-
+            
             .obligatorio{
                 background-color: #FCF8CC;
             }
@@ -67,6 +76,7 @@
                 background-color: #456d96;
                 text-align: center;
                 align-content: center;
+                width: 1920px;
                 height: 50px;
                 ;
                 color: white;
@@ -149,7 +159,6 @@
                         $desc = "%" . $aRespuestas['T02_DescDepartamento'] . "%";
 
                         $resultado = $miDB->query("SELECT * FROM T02_Departamento WHERE T02_DescDepartamento LIKE '$desc'");
-
                         if (!$resultado) {
                             $resultado = $miDB->query("SELECT * FROM T02_Departamento");
                             echo '<table>';
