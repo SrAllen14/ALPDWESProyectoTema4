@@ -1,9 +1,6 @@
 <?php
-// Array que contiene todos los parámetros de conexión
-return [
-    'host' => '10.199.8.153',
-    'username' => 'userGJLDWESProyectoTema4',
-    'password' => 'paso',
-    'dbname' => 'DBGJLDWESProyectoTema4',
-    'port' => 3306
-];
+
+    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
+    define('USERNAME','userALPDWESProyectoTema4');
+    define('PASSWORD', 'paso');
+?>

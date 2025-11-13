@@ -188,8 +188,8 @@
                     <tr>
                         <td>6</td>
                         <td>Página web que cargue registros en al tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio6pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo6.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
@@ -234,7 +234,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-11-07">07-11-2025</time>
+            <time datetime="2025-11-13">13-11-2025</time>
         </div>
     </footer>
 </body>
