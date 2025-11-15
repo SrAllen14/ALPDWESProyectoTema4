@@ -196,16 +196,16 @@
                     <tr>
                         <td>7</td>
                         <td>Página web que toma datos de un fichero .xml y los importe en el directorio ../tmp/ del servidor.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio7pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo7.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Página web que toma datos de la tabla Departamento y los exporte en el directorio ../tmp/departamento.xml del servidor.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio8pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo8.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
@@ -234,7 +234,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-11-13">13-11-2025</time>
+            <time datetime="2025-11-15">15-11-2025</time>
         </div>
     </footer>
 </body>
