@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Código ejercicio 6</title>
+        <title>Código ejercicio 7</title>
         <style>
             *{
                 margin: 0 auto;
@@ -46,12 +46,12 @@
     <body>
         <nav>
             <h2>DWES - Tema 4</h2>
-            <h2>Ejercicio 6</h2>
+            <h2>Ejercicio 7</h2>
         </nav>
         <main>
             <div class="ejercicio">
                 <?php 
-                    highlight_file("../codigoPHP/ejercicio6pdo.php");
+                    highlight_file("../codigoPHP/ejercicio7pdo.php");
                 ?>
             </div>
         </main>
@@ -60,7 +60,7 @@
                 <a href="../indexProyectoTema4.php">
                 Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-13">13-11-2025</time>
+                <time datetime="2025-11-18">18-11-2025</time>
             </div>
         </footer>
     </body>

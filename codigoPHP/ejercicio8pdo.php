@@ -56,8 +56,8 @@
                     /**
                      * @author Álvaro Allén
                      * @since 15-11-2025
-                     * Registros desde un array departamentosnuevos utilizando 
-                     * una consulta preparada
+                     * Exportación a archivo datos.json del contenido 
+                     * de la tabla T02_Departamento de la base de datos.
                      */
                      
                     require_once '../config/confDB.php';
@@ -65,21 +65,44 @@
                     setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'spanish');
                     
                     // Declaramos la variable con la ruta del archivo json
-                    $rutaArchivo = '../tmp/departamentosnuevos.xml';
+                    $numRegistros = 0;
                     
-                    if(!file_exists($rutaArchivo)){
-                        echo '<h2>No existe el archivo</h2>';
-                    } else{
-                        try{
-                        $archivoJSON = file_get_contents();
+                    try{
+                        $miDB = new PDO(DSN, USERNAME, PASSWORD);
+                        $sql = "SELECT * FROM T02_Departamento";
                         
-                        }catch(PDOException $ePDO){
-                            echo 'Error al conectarse: '.$ePDO->getMessage();
-                            echo 'Codigo de error: '.$ePDO->getCode();
-                            echo 'Linea de error: '.$ePDO->getLine();
-                        } finally{
-                            unset($miDB);
+                        $consulta = $miDB->prepare($sql);
+                        $consulta->execute();
+                        
+                        $aDepartamentos=[];
+                        $indice = 0;
+                        
+                        while($registro = $consulta->fetchObject()){
+                            $aDepartamentos[$indice]=[
+                              'T02_CodDepartamento' => $registro->T02_CodDepartamento,
+                              'T02_DescDepartamento' => $registro->T02_DescDepartamento,
+                              'T02_FechaCreacionDepartamento' => $registro->T02_FechaCreacionDepartamento,
+                              'T02_VolumenDeNegocio' => $registro->T02_VolumenDeNegocio,
+                              'T02_FechaBajaDepartamento' => $registro->T02_FechaBajaDepartamento ?? 'null'
+                            ];
+                            $indice++;
                         }
+                        
+                        // https://www.php.net/manual/es/json.constants.php
+                        $json = json_encode($aDepartamentos, JSON_PRETTY_PRINT);
+                        file_put_contents('../tmp/datos.json', $json);
+                        echo '<p>Datos introducidos correctamente.</p>';
+                        
+                        echo '<br>';
+                        echo '<br>';
+                        echo '<p>Contenido del archivo JSON.</p>';
+                        echo '<pre>';
+                            highlight_file('../tmp/datos.json');
+                        echo '</pre>';
+                    } catch(PDOException $exPDO){
+                        echo "<h3>$exPDO->getMessage()</h3>";
+                    } finally {
+                        unset($miDB);
                     }
                 ?>
             </div>
