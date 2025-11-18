@@ -15,7 +15,7 @@
             }
 
             nav{
-                background-color: #456D96; 
+                background-color: #456D96;
                 color: white;
             }
 
@@ -36,11 +36,12 @@
                 background-color: #456d96;
                 text-align: center;
                 align-content: center;
-                height: 50px;;
+                height: 50px;
+                ;
                 color: white;
 
                 & a{
-                   text-decoration: none; 
+                    text-decoration: none;
                 }
             }
         </style>
@@ -53,22 +54,79 @@
         <main>
             <div class="ejercicio">
                 <?php
-                    /**
-                     * @author Álvaro Allén
-                     * @since 15-11-2025
-                     * Realizar registros con datos recogidos de un archivo JSON.
-                     */
-                     
-                   
+                /**
+                 * @author Álvaro Allén
+                 * @since 18-11-2025
+                 * Realizar una importación de registros con datos recogidos de un archivo JSON.
+                 */
+                    require_once '../config/confDB.php';
+                    // Establecemos la configuración de fecha, hora y formato de España
+                    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'spanish');
+
+                    // Declaramos la variable con la ruta del archivo json
+                    $rutaArchivo = '../tmp/datos.json';
+
+                    if (!file_exists($rutaArchivo)) {
+                        echo '<h2>No existe el archivo</h2>';
+                    } else {
+                        // Recogemos el archivo JSON de la ruta.
+                        $archivoJSON = file_get_contents($rutaArchivo);
+
+                        // Convertimos el archivo JSON en un array con cada apartado.
+                        $aDepartamentos = json_decode($archivoJSON);
+                        try {
+                            $miDB = new PDO(DSN, USERNAME, PASSWORD);
+
+                            // Vaciamos la tabla para poder hacer las insercciones sin causar conflictos.
+                            $vaciarTabla = $miDB->prepare('TRUNCATE TABLE T02_Departamento');
+                            $vaciarTabla->execute();
+
+                            $miDB->beginTransaction();
+
+                            $consulta = 'INSERT INTO T02_Departamento VALUES (:codigo, :fechaAlta, :fechaBaja, :descripcion, :volumen)';
+
+                            $SQLConsulta = $miDB->prepare($consulta);
+                            foreach ($aDepartamentos as $registro) {
+                                $SQLConsulta->bindParam(":codigo", $registro['T02_CodDepartamento']);
+
+                                $fechaA = new DateTime($registro['T02_FechaCreacionDepartamento']);
+                                $fechaA = $fechaA->format('Y-m-d');
+                                $SQLConsulta->bindParam(":fechaAlta", $fechaA);
+
+                                if ($registro['T02_FechaBajaDepartamento'] === 'null') {
+                                    $SQLConsulta->bindParam(":fechaBaja", null);
+                                } else {
+                                    $fechaB = new DateTime($registro['T02_FechaBajaDepartamento']);
+                                    $fechaB = $fechaB->format('Y-m-d');
+                                    $SQLConsulta->bindParam(":fechaBaja", $fechaB);
+                                }
+
+                                $SQLConsulta->bindParam(":volumen", $registro['T02_DescDepartamento']);
+                                $SQLConsulta->bindParam(":volumen", $registro['T02_VolumenDepartamento']);
+
+                                $SQLConsulta->execute();
+                            }
+
+                            $miDB->commit();
+                            echo 'Datos importados correctamente del JSON';
+                        } catch (PDOException $ePDO) {
+                            $miDB->rollBack();
+                            echo 'Error al conectarse: ' . $ePDO->getMessage();
+                            echo 'Codigo de error: ' . $ePDO->getCode();
+                            echo 'Linea de error: ' . $ePDO->getLine();
+                        } finally {
+                            unset($miDB);
+                        }
+                    }
                 ?>
             </div>
         </main>
         <footer>
             <div>
                 <a href="../indexProyectoTema4.php">
-               Álvaro Allén Perlines
+                    Álvaro Allén Perlines
                 </a>
-                <time datetime="2025-11-15">15-11-2025</time>
+                <time datetime="2025-11-18">18-11-2025</time>
             </div>
         </footer>
     </body>

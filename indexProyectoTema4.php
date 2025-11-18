@@ -9,6 +9,7 @@
     <style>
         
         *{
+            box-sizing: border-box;
             margin: 0 auto;
             padding: 0 auto;
         }
@@ -114,25 +115,22 @@
                 <tr class="principal">
                     <td>Archivo</td>
                     <td>ED Script</td>
-                    <td colspan="2">EE Script</td>
+                    <td>EE Script</td>
                 </tr>
                 <tr>
                     <td>Script creación de base de datos y usuario</td>
                     <td class="imagen"><a href="mostrarcodigo/script1.php"><img src="webroot/images/code.png"></a></td>
-                    <td class="imagen"></td>
-                    <td class="imagen"></td>
+                    <td class="imagen"><a href="mostrarcodigo/script1EE.php"><img src="webroot/images/code.png"></a></td>
                 </tr>
                 <tr>
                     <td>Script carga inicial de base de datos</td>
                     <td class="imagen"><a href="mostrarcodigo/script2.php"><img src="webroot/images/code.png"></a></td>
-                    <td class="imagen"></td>
-                    <td class="imagen"></td>
+                    <td class="imagen"><a href="mostrarcodigo/script2EE.php"><img src="webroot/images/code.png"></a></td>
                 </tr>
                 <tr>
                     <td>Script borrado de base de datos y usuario</td>
                     <td class="imagen"><a href="mostrarcodigo/script3.php"><img src="webroot/images/code.png"></a></td>
-                    <td class="imagen"></td>
-                    <td class="imagen"></td>
+                    <td class="imagen"><a href="mostrarcodigo/script3EE.php"><img src="webroot/images/code.png"></a></td>
                 </tr>
             </table>
         </div>
@@ -196,16 +194,16 @@
                     <tr>
                         <td>7</td>
                         <td>Página web que toma datos de un fichero .xml y los importe en el directorio ../tmp/ del servidor.</td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio7pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
-                        <td class="imagen"><a href="mostrarcodigo/codigo7.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio7pdo.php"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo7.php"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Página web que toma datos de la tabla Departamento y los exporte en el directorio ../tmp/departamento.xml del servidor.</td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio8pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
-                        <td class="imagen"><a href="mostrarcodigo/codigo8.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio8pdo.php"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo8.php"></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
