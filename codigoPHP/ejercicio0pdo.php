@@ -9,6 +9,8 @@
                 padding: 0 auto;
             }
             body{
+                width: 1920px;
+                height: 1080px;
                 font-family: Arial, sans-serif;
                 background: #f4f6f9;
                 align-items: center;
@@ -83,9 +85,7 @@
                     
                     // Definimos las constantes con el valor del DNS (host y nombre de la base)
                     // el nombre del usuario y la contraseña.
-                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
-                    define('USERNAME','userALPDWESProyectoTema4');
-                    define('PASSWORD', 'paso');
+                    require_once '../config/confDB.php';
                     
                     // Definimos un array con cada uno de los atributos que tiene una base de datos.
                     $aAtributos = array(

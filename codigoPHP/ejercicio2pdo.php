@@ -8,6 +8,8 @@
                 padding: 0 auto;
             }
             body{
+                width: 1920px;
+                height: 1080px;
                 font-family: Arial, sans-serif;
                 background: #f4f6f9;
                 align-items: center;
@@ -72,9 +74,7 @@
                      */
                     
                     // Declaramos las constantes con el valor del host, el nombre de la base, el nombre de usuario y la constraseña de dicho usuario.
-                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
-                    define('USERNAME','userALPDWESProyectoTema4');
-                    define('PASSWORD', 'paso');
+                    require_once '../config/confDB.php';
                     
                     // El ejercicio se realiza dentro de un try para que, en caso de que haya un error, deje de ejecutarse y salte el mensaje de error.
                     try{

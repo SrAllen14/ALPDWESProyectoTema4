@@ -8,6 +8,8 @@
                 padding: 0 auto;
             }
             body{
+                width: 1920px;
+                height: 1080px;
                 font-family: Arial, sans-serif;
                 background: #f4f6f9;
                 align-items: center;
@@ -96,12 +98,8 @@
                     // Enlace para importar las librerías de validación de campos
                     require_once '../core/231018libreriaValidacion.php';
                     require_once '../core/miLibreriaValidacion.php';
+                    require_once '../config/confDB.php';
 
-                    // Declaramos las constantes con el valor del host, el nombre de la base, el nombre de usuario y la constraseña de dicho usuario.
-                    define('DSN', 'mysql:host='.$_SERVER['SERVER_ADDR'].'; dbname=DBALPDWESProyectoTema4');
-                    define('USERNAME','userALPDWESProyectoTema4');
-                    define('PASSWORD', 'paso');
-                    
                      //inicialización de variables
                     $aErrores = [
                         'T02_CodDepartamento' => '',
