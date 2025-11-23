@@ -143,85 +143,64 @@
                         <td>Nº</td>
                         <td>Enunciado</td>
                         <td colspan="2">PDO</td>
-                        <td colspan="2">MySQLi</td>
                     </tr>
                     <tr>
                         <td>1</td>
                         <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio0pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo0.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio2pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo2.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio3pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo3.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo DescDepartamento, si el usuario no poone nada deben aparecer todos los departamentos.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio4pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo4.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Página web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones insert y una transacción.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio5pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo5.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>Página web que cargue registros en al tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada.</td>
                         <td class="imagen"><a href="codigoPHP/ejercicio6pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
                         <td class="imagen"><a href="mostrarcodigo/codigo6.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>Página web que toma datos de un fichero .xml y los importe en el directorio ../tmp/ del servidor.</td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio7pdo.php"></a></td>
-                        <td class="imagen"><a href="mostrarcodigo/codigo7.php"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio7pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo7.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>Página web que toma datos de la tabla Departamento y los exporte en el directorio ../tmp/departamento.xml del servidor.</td>
-                        <td class="imagen"><a href="codigoPHP/ejercicio8pdo.php"></a></td>
-                        <td class="imagen"><a href="mostrarcodigo/codigo8.php"></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
+                        <td class="imagen"><a href="codigoPHP/ejercicio8pdo.php"><img src="webroot/images/play.png" alt="play.png"></a></td>
+                        <td class="imagen"><a href="mostrarcodigo/codigo8.php"><img src="webroot/images/code.png" alt="code.png"></a></td>
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>Aplicación resument MtoDeDepartamentoTema4.</td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>Aplicación resumen MtoDepartamento POO y multicapa.</td>
-                        <td class="imagen"><a href=""></a></td>
-                        <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                         <td class="imagen"><a href=""></a></td>
                     </tr>
@@ -234,7 +213,7 @@
             <a href="/index.html">
            Álvaro Allén Perlines
             </a>
-            <time datetime="2025-11-18">18-11-2025</time>
+            <time datetime="2025-11-23">23-11-2025</time>
         </div>
     </footer>
 </body>
