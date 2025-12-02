@@ -85,6 +85,8 @@
                     
                     // Definimos las constantes con el valor del DNS (host y nombre de la base)
                     // el nombre del usuario y la contraseña.
+                    // Usamos para ello un archivo de configuración con las constantes definidas con 
+                    // los valores pertinentes.
                     require_once '../config/confDB.php';
                     
                     // Definimos un array con cada uno de los atributos que tiene una base de datos.
@@ -103,6 +105,7 @@
                         echo 'Conectado a la BBDD con éxito';
                         echo '<br><br>';
                         
+                        // Mostramos los distintos atributos de la conexión con la base de datos.
                         echo '<p><b>Atributos de la conexión</b></p>';
                         echo '<table>';
                         foreach($aAtributos as $atributo){
@@ -116,14 +119,19 @@
                             echo '</tr>';
                         }
                         echo '</table>';
-                    } catch (PDOException $miExceptionPDO){
+                    } catch (PDOException $miExceptionPDO){ 
+                        // Capturamos las posibles excepciones que pueda darnos la conexión con la base de datos y con las peticiones realizadas.
                         echo "Error: ".$miExceptionPDO->getMessage();
                         echo '<br>';
                         echo 'Código de error: '.$miExceptionPDO->getCode();
                     } finally{
+                        // Al destruir el objeto $miDB estamos cerrando la conexión con la base de datos.
                         unset($miDB);
                     }
                     
+                    
+                    // Ahora mostramos un error de conexión al introducir una contraseña incorrecta.
+                    // La ejecución resultara en excepción y saltará el mensaje de error.
                     echo '<br>';
                     echo "<h3>Eror de conexión por contraseña incorrecta.</h3>";
                     try{

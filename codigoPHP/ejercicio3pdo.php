@@ -163,6 +163,7 @@
                             echo '<td>T02_VolumenDeNegocio</td>';
                             echo '</tr>';
 
+                            // Recorremos el valor del objeto PDO con el método fetch().
                             while($aFila = $consulta->fetch()){
                                 echo '<tr>';
                                 echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';

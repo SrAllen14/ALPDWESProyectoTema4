@@ -68,7 +68,10 @@
                     $numRegistros = 0;
                     
                     try{
+                        // Realizamos la conexión con la base de datos creando un objeto PDO.
                         $miDB = new PDO(DSN, USERNAME, PASSWORD);
+                        
+                        // Realizamos la selección de todos los campos de la tabla T02_Departamento.
                         $sql = "SELECT * FROM T02_Departamento";
                         
                         $consulta = $miDB->prepare($sql);
@@ -77,6 +80,7 @@
                         $aDepartamentos=[];
                         $indice = 0;
                         
+                        // Guardamos en un array con cada campo de la tabla como clave y el valor de cada campo como valor.
                         while($registro = $consulta->fetchObject()){
                             $aDepartamentos[$indice]=[
                               'T02_CodDepartamento' => $registro->T02_CodDepartamento,

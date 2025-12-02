@@ -94,6 +94,7 @@
                         echo '<td>T02_VolumenDeNegocio</td>';
                         echo '</tr>';
                         
+                        // Recorremos cada uno de los resultados mediante el método fetch().
                         while($aFila = $consulta->fetch()){
                             echo '<tr>';
                                 echo '<td>'.$aFila['T02_CodDepartamento'].'</td>';
@@ -110,6 +111,7 @@
                         
                         echo '</table>';
                     }catch(PDOException $ePDO){
+                        // En caso de excepción en la ejecución mostramos el mensaje de error.
                         echo 'Error al conectarse: '.$ePDO->getMessage();
                     }
                     

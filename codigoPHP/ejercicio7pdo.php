@@ -75,6 +75,7 @@
                         // Convertimos el archivo JSON en un array con cada apartado.
                         $aDepartamentos = json_decode($archivoJSON, true);
                         try {
+                            // Realizamos la conexión con la base de datos creando un objeto PDO.
                             $miDB = new PDO(DSN, USERNAME, PASSWORD);
                                 
                             // Vaciamos la tabla para poder hacer las insercciones sin causar conflictos.
@@ -83,6 +84,7 @@
 
                             $miDB->beginTransaction();
 
+                            // Realizamos la insercción de los datos recogidos en el archivo JSON en la tabla T02_Departamento.
                             $consulta = 'INSERT INTO T02_Departamento VALUES (:codigo, :fechaAlta, :fechaBaja, :descripcion, :volumen)';
 
                             $SQLConsulta = $miDB->prepare($consulta);
@@ -109,6 +111,7 @@
                             $miDB->commit();
                             echo 'Datos importados correctamente del JSON';
                         } catch (PDOException $ePDO) {
+                            // En caso de lanzar una excepción se revertiran todos los cambios realizados durante la última ejecución.
                             $miDB->rollBack();
                             echo 'Error al conectarse: ' . $ePDO->getMessage();
                             echo 'Codigo de error: ' . $ePDO->getCode();

@@ -87,6 +87,7 @@
 
                         $consultaPreparada = $miDB->prepare($sql);
                         
+                        // Introducimos los parámetros necesarios en la consulta preparada.
                         foreach ($aDepartamentosNuevos as $departamento) {
                             $consultaPreparada->bindParam(':codigo', $departamento[0]);
                             $consultaPreparada->bindParam(':descripcion', $departamento[1]);

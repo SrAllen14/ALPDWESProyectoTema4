@@ -158,6 +158,8 @@
                         $miDB = new PDO(DSN, USERNAME, PASSWORD);
                         $desc = "%" . $aRespuestas['T02_DescDepartamento'] . "%";
 
+                        // Seleccionamos todas las columnas de la tabla departamento cuando 
+                        // la descripción coincide con el texto introducido en el input del formulario.
                         $resultado = $miDB->query("SELECT * FROM T02_Departamento WHERE T02_DescDepartamento LIKE '$desc'");
                         if (!$resultado) {
                             $resultado = $miDB->query("SELECT * FROM T02_Departamento");
@@ -235,6 +237,7 @@
         // Iniciamos el objeto PDO con los valores de las constantes.
         $miDB = new PDO(DSN, USERNAME, PASSWORD);
 
+        // Seleccionamos todas las columnas de la tabla T02_Departamento.
         $resultado = $miDB->query("SELECT * FROM T02_Departamento");
         echo '<table>';
         echo '<tr class="titulo">';
